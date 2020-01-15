@@ -1,0 +1,13 @@
+{   "name": "vue-docs",
+    "homepage": "https://veaba.github.io/vue-docs",
+    "scripts": {
+      "dev": "vuepress dev docs",
+      "build": "vuepress build docs"
+    },
+    "dependencies": {
+        "vuepress-plugin-container": "^2.0.2"
+      },
+      "devDependencies": {
+        "vuepress": "^1.1.0"
+      }
+}
