@@ -1,4 +1,4 @@
-# !/bin/bash
+# !/bin/bash 并未使用这个脚本
 cd docs/
 git init
 
@@ -46,7 +46,7 @@ git commit -m "[Deploy sucess]：`date`"
 
 
 # 抛出错误
-set -e 
+set -e
 
 # 用echo 拼装，否则会无效！！测试了上百次的结果,access token 会被过滤
 
