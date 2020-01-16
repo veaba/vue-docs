@@ -2,7 +2,6 @@
  * @desc VuePress Config.js
  * */
 module.exports = {
-	base:'/vue-docs/',
 	title: 'Vue.js 3 docs',
 	author: 'veaba',
 	description: 'Vue.js 3 ，最新前瞻中文文档笔记, 非官方，仿Vue README.md 文档',
