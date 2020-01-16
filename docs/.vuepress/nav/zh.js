@@ -9,7 +9,10 @@ module.exports = [
 		text: '前瞻TODO',
 		items: [
 			{
-				text: '生态圈兼容情况', link: '/ecosystems/compatible/'
+				text: '源码解读', link: '/v3/source/',
+			},
+			{
+				text: '生态圈兼容情况', link: '/ecosystems/compatible/',
 			}
 		]
 	},

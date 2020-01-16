@@ -4,20 +4,22 @@
 module.exports = {
 	title: 'Vue.js 3',
 	author: 'veaba',
-	description: 'Vue.js 3 ，最新前瞻中文文档笔记, 非官方，仿Vue 2 文档',
+	description: 'Vue.js 3 ，最新前瞻中文文档笔记, 非官方，仿Vue README.md 文档',
 	displayAllHeaders: true,
 	scss: {},
 	themeConfig: {
 		repo: 'veaba/vue-docs',
 		logo: '/images/logo.png',
-		locales:{
+		locales: {
 			// 主站是中文
-			'/':{
-				label:'简体中文',
-				selectText:'选择语言',
-				editLinkText:'在Github编辑此页',
+			'/': {
+				label: '简体中文',
+				selectText: '选择语言',
+				editLinkText: '在Github编辑此页',
 				nav: require('./nav/zh'),
-				sidebar: require('./sidebar/zh')
+				sidebar: {
+					'/guide/': getGuideSidebar(),
+				}
 			}
 		}
 	},
@@ -45,3 +47,25 @@ module.exports = {
 		'.vuepress/nav/zh.js',
 	]
 };
+
+function getApiSidebar() {
+	return [
+		'cli',
+		'node'
+	]
+}
+function getGuideSidebar () {
+	return [
+		{
+			title: '基础',
+			collapsable: false,
+			children: [
+				'getting-started',
+			]
+		}
+	]
+}
+
+function getPluginSidebar() {
+
+}
