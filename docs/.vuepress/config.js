@@ -1,0 +1,47 @@
+/**
+ * @desc VuePress Config.js
+ * */
+module.exports = {
+	title: 'Vue.js 3',
+	author: 'veaba',
+	description: 'Vue.js 3 ，最新前瞻中文文档笔记, 非官方，仿Vue 2 文档',
+	displayAllHeaders: true,
+	scss: {},
+	themeConfig: {
+		repo: 'veaba/vue-docs',
+		logo: '/images/logo.png',
+		locales:{
+			// 主站是中文
+			'/':{
+				label:'简体中文',
+				selectText:'选择语言',
+				editLinkText:'在Github编辑此页',
+				nav: require('./nav/zh'),
+				sidebar: require('./sidebar/zh')
+			}
+		}
+	},
+	// vuepress-plugin-container 容器
+	plugins: [
+		// tip
+		['container', {
+			type: 'tip',
+			before: title => `<div class="tip custom-block"> <p class="title">${title}</p>`,
+			after: '</div>'
+		}],
+		['container', {
+			type: 'warning',
+			before: title => `<div class="warning custom-block"> <p class="title">${title}</p>`,
+			after: '</div>'
+		}],
+		['container', {
+			type: 'danger',
+			before: title => `<div class="danger custom-block"> <p class="title">${title}</p>`,
+			after: '</div>'
+		}],
+	],
+	extraWatchFiles: [
+		// '.vuepress/nav/en.js',
+		'.vuepress/nav/zh.js',
+	]
+};
