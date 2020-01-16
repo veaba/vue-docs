@@ -4,9 +4,12 @@
 module.exports = {
 	title: 'Vue.js 3 docs',
 	author: 'veaba',
-	description: 'Vue.js 3 ，最新前瞻中文文档笔记, 非官方，仿Vue README.md 文档',
+	description: 'Vue.js 3 ，最新前瞻中文文档',
 	displayAllHeaders: true,
 	scss: {},
+	head:[
+		['link', { rel: 'icon', href: '/favicon.ico' }]
+	],
 	themeConfig: {
 		repo: 'veaba/vue-docs',
 		logo: '/images/logo.png',
