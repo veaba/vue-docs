@@ -15,7 +15,7 @@
 #### Fragment `{Symbol(Fragment)}`
 #### Protal `{Symbol(Protal)}`
 #### Text `{Symbol(Text)}`
-#### version:"3.0.0-alpha.2" `{string}`
+#### version: "3.0.0-alpha.2"
 
 ------------------------------------------------------------
 
@@ -107,14 +107,14 @@
     - onLeave `{Boolean}`
     - onLeaveLCancelled `{Function}`
     - persisted `{Function}`
-- setup: setup(props,{slots}) 替代原来的data, `{Function}`
+- setup: setup(props,{slots})
 #### KeepAlive `{Object}`
 - name
 - props:
     - exclude: `[String,RegExp,Array]`
     - include: `[String,RegExp,Array]`
     - max: `[String,Number]`
-- setup: setup(props,{slots}) 替代原来的data, `{Function}`
+- setup: setup(props,{slots})
 - __isKeepAlive: `true`
 #### PatchFlags `{Object}` 一个枚举
 - BAIL:-1
@@ -220,7 +220,7 @@
     - persisted: ƒ Boolean()
     - tag: ƒ String()
     - type: ƒ String()
-- setup: setup(props,{slots}) 替代原来的data, `{Function}`
+- setup: setup(props,{slots})
 #### vModelCheckbox `{Object}`
 - beforeMount `{Function}`
 - beforeUpdate `{Function}`
