@@ -5,14 +5,13 @@
  * */
 
 const introductionLinks = [
-	'getting-started',
+	{title: "Overview", type: "group", link: "/v3/guide/team"},
 ];
 module.exports = {
 	'/v3/': [
 		{
 			title: '简介',
 			collapsable: false,
-			link: '/v3/',
 			children: introductionLinks
 		}
 	]
