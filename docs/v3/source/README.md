@@ -1,4 +1,4 @@
-# 源码解读
+# 源码解读/@vue
 
 > by @veaba
 >
@@ -7,6 +7,16 @@
 ## 相关链接
 - [Vue-next Repo](https://github.com/vuejs/vue-next)
 - [Vue-next docs,by@veaba](https://github.com/veaba/vue-docs)
+- [Vue-composition-api](https://vue-composition-api-rfc.netlify.com/#api-introduction)
+- [Vue-next 添加注释>branch:veaba](https://github.com/veaba/vue-next)
+    - [@Vue/compile-core](/source/compile-core)
+    - [@Vue/compile-dom](/source/compile-dom)
+    - [@Vue/compile-sfc](/source/compile-sfc)
+    - [@Vue/reactivity](/source/reactivity)
+    - [@Vue/runtime-core](/source/runtime-core)
+    - [@Vue/runtime-dom](/source/runtime-dom)
+    - [@Vue/shared](/source/shared)
+
 ## Class Vue
 
 ------------------------------------------------------------
@@ -246,3 +256,14 @@
 
 
 
+## Vue 错误枚举
+
+### DOMErrorMessages
+- [DOMErrorCodes.X_V_HTML_NO_EXPRESSION]: `v-html is missing expression.`,
+- [DOMErrorCodes.X_V_HTML_WITH_CHILDREN]: `v-html will override element children.`,
+- [DOMErrorCodes.X_V_TEXT_NO_EXPRESSION]: `v-text is missing expression.`,
+- [DOMErrorCodes.X_V_TEXT_WITH_CHILDREN]: `v-text will override element children.`,
+- [DOMErrorCodes.X_V_MODEL_ON_INVALID_ELEMENT]: `v-model can only be used on <input>, <textarea> and <select> elements.`,
+- [DOMErrorCodes.X_V_MODEL_ARG_ON_ELEMENT]: `v-model argument is not supported on plain elements.`,
+- [DOMErrorCodes.X_V_MODEL_ON_FILE_INPUT_ELEMENT]: `v-model cannot used on file inputs since they are read-only. Use a v-on:change listener instead.`,
+- [DOMErrorCodes.X_V_SHOW_NO_EXPRESSION]: `v-show is missing expression.`

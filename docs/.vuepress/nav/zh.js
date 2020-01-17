@@ -9,7 +9,31 @@ module.exports = [
 		text: '前瞻TODO',
 		items: [
 			{
-				text: '源码解读', link: '/v3/source/',
+				text: '源码解读@vue', link: '/v3/source/',
+			},
+			{
+				text: '  ->@vue/compile-dom', link: '/v3/source/compile-dom',
+			},
+			{
+				text: '  ->@vue/compile-core', link: '/v3/source/compile-core',
+			},
+			{
+				text: '  ->@vue/compile-sfc', link: '/v3/source/compile-sfc',
+			},
+			{
+				text: '  ->@vue/runtime-core', link: '/v3/source/runtime-core',
+			},
+			{
+				text: '  ->@vue/runtime-dom', link: '/v3/source/runtime-dom',
+			},
+			{
+				text: '  ->@vue/reactivity', link: '/v3/source/reactivity',
+			},
+			{
+				text: '  ->@vue/server-render', link: '/v3/source/server-render',
+			},
+			{
+				text: '  ->@vue/shared', link: '/v3/source/shared',
 			},
 			{
 				text: '生态圈兼容情况', link: '/ecosystems/compatible/',

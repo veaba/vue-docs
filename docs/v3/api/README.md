@@ -6,6 +6,39 @@
 
 ## 选项 / 数据
 
+### setup
+可以看这个描述[点击](https://vue-composition-api-rfc.netlify.com/api.html#setup)
+
+#### 生命周期
+
+仅在`setup`函数内部有效
+
+```js
+import {onMounted,onUpdated,onUnmounted} from 'vue'
+
+const myComponent={
+setup(){
+    // 组件挂载触发
+    onMounted(()=>{
+        console.log('第一步: 组件挂载')
+    })
+    // 组件有更新
+    onUpdated(()=>{
+        console.log('第二步：组件有更新')
+    })
+    // 卸载组件
+    onUnmounted(()=>{
+        console.log('第三步：卸载组件')
+    })
+}
+
+}
+
+
+
+
+```
+
 ## 选项 / DOM
 
 ## 选项 / 声明周期钩子
@@ -104,11 +137,39 @@
 ## 实例方法 / 生命周期
 
 ## 指令 
+### v-text 
+### v-html
+### v-show
+### v-if
+### v-else
+### v-else-if
+### v-for
+### v-on
+### v-bind
+### v-model
+### v-slot
+### v-pre
+### v-cloak
+### v-once
+
 
 ## 特殊特性
+### key
+### ref
+### is
+### slot
+### slot-sopse
+### scope
 
 ## 内置组件
+### component
+### transition
+### transition-group
+### keep-alive
+### slot
 
 ## VNode 接口
+- 请参考[VNode class declaration](https://github.com/vuejs/vue/blob/dev/src/core/vdom/vnode.js)
 
 ## 服务端渲染
+- 请参考[ vue-server-renderer package docs](https://github.com/vuejs/vue/tree/dev/packages/vue-server-renderer)
