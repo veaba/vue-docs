@@ -53,4 +53,8 @@ echo $(git push -f https://veaba:${ACCESS_TOKEN_PUSH}@github.com/veaba/vue-docs.
 
 echo $(ls)
 
+echo $(pwd)
+
+echo $(export)
+
 echo "漂亮！部署成功： $(date)"
