@@ -16,12 +16,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: 步骤：第二步，安装依赖
-        run: |
-          npm install
-          npm run build --if-present
-        env:
-          CI: true
+      # - name: 步骤：第二步，安装依赖
+      #   run: |
+      #     npm install
+      #     npm run build --if-present
+      #   env:
+      #     CI: true
       # - name: 步骤：第三步：Deploy,部署
       #   uses: peaceiris/actions-gh-pages@v2.5.0
       #   env:
@@ -34,4 +34,6 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./docs/.vuepress/dist
         run: |
-          sh scripts/deploy.sh
+          sh scripts/test.sh
+      #    # sh scripts/deploy.sh
+
