@@ -1,8 +1,8 @@
 # !/bin/bash
 cd docs/
-# git init
+git init
 
-function print_error(){
+function print_error() {
     echo -e "\e[31mERROR: ${1}\e[m"
 }
 # 配置仓库地址
