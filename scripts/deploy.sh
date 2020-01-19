@@ -2,9 +2,9 @@
 cd docs/
 # git init
 
-# function print_error() {
-#     echo -e "\e[31mERROR: ${1}\e[m"
-# }
+function print_error() {
+    echo -e "\e[31mERROR: ${1}\e[m"
+}
 # # 配置仓库地址
 # if [ -n "${EXTERNAL_REPOSITORY}" ]; then
 #     PUBLISH_REPOSITORY=${EXTERNAL_REPOSITORY}
@@ -39,16 +39,16 @@ cd docs/
 # git add .
 # git commit -m "[Deploy sucess]：$(date)"
 
-if [ -n ${ACTIONS_DEPLOY_KEY}];then
+if [ -n ${ACTIONS_DEPLOY_KEY}]; then
     print_error "11-ACTIONS_DEPLOY_KEY"
-elif [ -n "${PERSONAL_TOKEN}"];then 
+elif [ -n "${PERSONAL_TOKEN}"]; then
     print_error "22-PERSONAL_TOKEN"
-elif [ -n "${GITHUB_TOKEN}"];then
+elif [ -n "${GITHUB_TOKEN}"]; then
     print_error "GITHUB_TOKEN"
 else
     print_error "啥都没有，将终止 "
     exit 1
-
+fi
 # 抛出错误
 set -e
 
