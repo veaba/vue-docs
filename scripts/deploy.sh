@@ -1,6 +1,6 @@
-# !/bin/bash 并未使用这个脚本
+# !/bin/bash
 cd docs/
-git init
+# git init
 
 function print_error() {
     echo -e "\e[31mERROR: ${1}\e[m"
@@ -21,37 +21,36 @@ if [ -n "${DEPLOY_ACCESS_TOKEN}"]; then
         SSH_DIR="/root/.ssh"
     fi
     mkdir "${SSH_DIR}"
-    ssh-keyscan -t rsa github.com > "${SSH_DIR}/known_hosts"
-    echo "${DEPLOY_ACCESS_TOKEN}" > "${SSH_DIR}/id_rsa"
+    ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
+    echo "${DEPLOY_ACCESS_TOKEN}" >"${SSH_DIR}/id_rsa"
     chmod 400 "${SSH_DIR}/id_rsa"
 
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
-
+fi
 # 检查要发布的脚本
-if [ -z "${PUBLISH_BRANCH}"];then
+if [ -z "${PUBLISH_BRANCH}"]; then
     print_error "致命错误：没有发现 PUBLISH_BRANCH"
     exit 1
+fi
 # 跳过配置personal_token 和 github_token
 remote_branch="${PUBLISH_BRANCH}"
-
 
 # 配置git
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-git remote rm origin  || true
+git remote rm origin || true
 
 # git提交
 git add .
-git commit -m "[Deploy sucess]：`date`"
-
+git commit -m "[Deploy sucess]：$(date)"
 
 # 抛出错误
 set -e
 
 # 用echo 拼装，否则会无效！！测试了上百次的结果,access token 会被过滤
 
-echo `git push -f https://veaba:${ACCESS_TOKEN_PUSH}@github.com/veaba/vue-docs.git master:gh-pages`
+echo $(git push -f https://veaba:${ACCESS_TOKEN_PUSH}@github.com/veaba/vue-docs.git master:gh-pages)
 
-echo `ls`
+echo $(ls)
 
-echo "漂亮！部署成功： `date`"
+echo "漂亮！部署成功： $(date)"
