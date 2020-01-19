@@ -34,6 +34,4 @@ jobs:
           ACCESS_TOKEN_DEPLOY: ${{secrets.ACTIONS_ACCESS_TOKEN_VUE_DOCS_CI }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./docs/.vuepress/dist
-        run: |
-          chmod +x scripts/deploy.sh
-          bash scripts/deploy.sh
+        run: chmod +x ./scripts/deploy.sh
