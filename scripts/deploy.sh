@@ -41,6 +41,14 @@ function print_error() {
 
 if [ -n ${ACTIONS_DEPLOY_KEY}]; then
     print_error "11-ACTIONS_DEPLOY_KEY"
+    echo "设置 DEPLOY_ACCESS_TOKEN"
+    SSH_DIR="/root/.ssh"
+    mkdir "${SSH_DIR}"
+    ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
+    echo "${DEPLOY_ACCESS_TOKEN}" >"${SSH_DIR}/id_rsa"
+    chmod 400 "${SSH_DIR}/id_rsa"
+
+    remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
 elif [ -n "${PERSONAL_TOKEN}"]; then
     print_error "22-PERSONAL_TOKEN"
 elif [ -n "${GITHUB_TOKEN}"]; then
