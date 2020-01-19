@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo `ls`
 set -e
 function e(){
