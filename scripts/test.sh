@@ -1,4 +1,5 @@
-ehco `ls`
+echo `ls`
+set e
 function e(){
     echo "hhh"
 }
