@@ -1,5 +1,5 @@
 # !/bin/bash
-cd docs/
+cd {$PUBLISH_DIR}
 git init
 
 function print_error() {
@@ -19,7 +19,6 @@ if [ -n "${DEPLOY_ACCESS_TOKEN}"]; then
     ssh-keyscan -t rsa github.com >"${SSH_DIR}/known_hosts"
     echo "${DEPLOY_ACCESS_TOKEN}" >"${SSH_DIR}/id_rsa"
     chmod 400 "${SSH_DIR}/id_rsa"
-
     remote_repo="git@github.com:${PUBLISH_REPOSITORY}.git"
 fi
 # 检查要发布的脚本
@@ -35,12 +34,16 @@ git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git remote rm origin || true
 
+# 配置CNAME
+echo "vue.datav.ai" > CNAME
+
+# 错误
+set -e
+
 # git提交
 git add .
 git commit -m "[Deploy sucess]：$(date)"
 
-# 抛出错误
-set -e
 
 # 用echo 拼装，否则会无效！！测试了上百次的结果,access token 会被过滤
 
