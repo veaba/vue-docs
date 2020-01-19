@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo `ls`
+echo $(ls)
 set -e
-function e(){
+function e() {
     echo "hhh"
 }
 
