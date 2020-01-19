@@ -1,5 +1,5 @@
 echo `ls`
-set e
+set -e
 function e(){
     echo "hhh"
 }
