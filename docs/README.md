@@ -46,7 +46,8 @@ npm run dev
 ```js
 import {createApp} from "vue" // import createApp
 import App from "./App.vue"   // A vue component
-createApp.mount(App,"#app")   // Bind component on dom
+createApp(App).mount("#app")  // Bind component on dom alpha-3=> createApp.mount(App,"#app")
+
 ```
 
 ### 注意
