@@ -1,5 +1,9 @@
 # Vue-router-next
 
+::: tip
+以下文档为 [@veaba](https://github.com/veaba) 个人学习笔记，转载请注明来源，同时此项目开源 [veaba/vue-docs](https://github.com/veaba/vue-docs)
+::: 
+
 ## 比较异同
 - [Examples->/veaba/vue-route-next](https://github.com/veaba/vue-router-next/tree/dev-veaba/examples)
 - 需要手动获取`$route`,但这个`$route`是保留字，暂无无法使用
@@ -67,32 +71,41 @@ app.mount('#app')
 ::: 
 
 ```ts
-import { useRoute} from 'vue-router-next'
- const route: any = useRoute()
+import { useRoute } from 'vue-router-next'
+const route: any = useRoute()
 ```
 
 ## 如果你需要当前组件的参数，类似以前的$route
 
 ```ts
-  setup() {
+setup() {
     const route = useRoute()
     const currentLocation = computed(() => {
-      const { matched, ...rest } = route.value
-      return rest
+        const { matched, ...rest } = route.value
+        return rest
     })
     return {
-      currentLocation,// $route是保护的关键字，无法被覆盖
+        currentLocation,// $route是保护的关键字，无法被覆盖
     }
-  },
+},
 ```
 
-## 对比下vue2的差异
-来自官方vue2的examples demo
+### 对比下vue2的差异
 
-|Item|vue-router(Vue 2)| vue-router-next(Vue 3)| IE11|
+来自vue2的examples demo
+
+|Item|vue-router(expect)| vue-router-next(actual)|latest remark|
 |----|----|---|---|
-|`Mode:'hash'`|`http://127.0.0.1:8080/hash-mode/#/`|`http://127.0.0.1:8080/#hash-mode/`|vue2|
-|||||
+|`Mode:'hash'`|`/hash-mode/#/`|`/#hash-mode/`| no support IE11|
+|`router-link tag="li"`|√|x|attrs `tag` no yet|
+|`:to="{params: { zapId: 2 }}"`|√|x| to value is object,not supported yet|
+|`{history: createHistory('/' + __dirname)}`|`mode`,`base`| use `history`|`history` mode must be has string `/`|
+|需要重新校验 `/x`=>`/x/x` |auto add suffix `/`| auto add last route name,or suffix is add `/`||
+| route-matching `{ path: '/' }`|√|typescript err||
+|`active-links`、`a-c`,"&" is not allowed in route name||||
+|`{ path: '*', redirect: '/' }` |√|x|||
+|`/redirect/redirect-with-params/123` -> `/redirect/with-params/:id`|√|x||
+|`/redirect/relative-redirect` -> `/redirectfoo`|√ `/redirect/foo`|`/redirectfoo` in url||
 |||||
 |||||
 |||||
@@ -108,5 +121,7 @@ import createWebHistory from './html5'
 export default function createWebHashHistory(base: string = ''): RouterHistory {
   // Make sure this implementation is fine in terms of encoding, specially for IE11
   return createWebHistory('/#' + base)
+
+  // 改成这样return createHistory('/' + base + '/#') 就和vue2一样了,但看起来时后面追加的'#'，不太对劲
 }
 ```
