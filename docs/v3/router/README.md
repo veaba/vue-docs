@@ -7,7 +7,7 @@
 
 ## vue-router-next 路由使用
 
-```typescript
+```ts
 import { createRouter, createHistory, useRoute,RouteComponent } from 'vue-router-next'
 import { createApp} from 'vue'
 const Home: RouteComponent = { template: '<div>home</div>' }
@@ -66,14 +66,14 @@ app.mount('#app')
 由于官方尚未开发完成，vue-next中保留了关键字 `$router`、`$route` 给后面的 `vue-router-next` 使用，这两个关键词现在不能使用
 ::: 
 
-```vuejs
+```ts
 import { useRoute} from 'vue-router-next'
  const route: any = useRoute()
 ```
 
 ## 如果你需要当前组件的参数，类似以前的$route
 
-```typescript
+```ts
   setup() {
     const route = useRoute()
     const currentLocation = computed(() => {
@@ -84,4 +84,29 @@ import { useRoute} from 'vue-router-next'
       currentLocation,// $route是保护的关键字，无法被覆盖
     }
   },
+```
+
+## 对比下vue2的差异
+来自官方vue2的examples demo
+
+|Item|vue-router(Vue 2)| vue-router-next(Vue 3)| IE11|
+|----|----|---|---|
+|`Mode:'hash'`|`http://127.0.0.1:8080/hash-mode/#/`|`http://127.0.0.1:8080/#hash-mode/`|vue2|
+|||||
+|||||
+|||||
+|||||
+
+### Vue-router-next hash暂不支持IE11
+
+[Source code: /history/hash.ts](https://github.com/vuejs/vue-router-next/blob/master/src/history/hash.ts)
+```ts
+  
+import { RouterHistory } from './common'
+import createWebHistory from './html5'
+
+export default function createWebHashHistory(base: string = ''): RouterHistory {
+  // Make sure this implementation is fine in terms of encoding, specially for IE11
+  return createWebHistory('/#' + base)
+}
 ```
