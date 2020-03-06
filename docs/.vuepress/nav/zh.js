@@ -50,6 +50,7 @@ module.exports = [
 				items: [
 					{text: '教程', link: '/v3/guide/'},
 					{text: 'vue-router-next', link: '/v3/router/'},
+					{text: 'transition',link:'/v3/guide/transition/'},
 					{text: 'API', link: '/v3/api/'},
 					{text: '风格指南', link: '/v3/style-guide/'},
 					{text: '示例', link: '/v3/examples/'},
