@@ -1,13 +1,14 @@
 # Vue-router-next
 
-::: tip
-以下文档为 [@veaba](https://github.com/veaba) 个人学习笔记，转载请注明来源，同时此项目开源 [veaba/vue-docs](https://github.com/veaba/vue-docs)
+::: tip 阅读提示：
+以下文档为 [@veaba](https://github.com/veaba) 个人学习笔记，随着版本的更迭，不确保描述是完全可信性的，转载请注明来源，同时此项目开源 [veaba/vue-docs](https://github.com/veaba/vue-docs)
 ::: 
 
-## 比较异同
+## 比较异同、新特性、新改变
 - [Examples->/veaba/vue-route-next](https://github.com/veaba/vue-router-next/tree/dev-veaba/examples)
 - 需要手动获取`$route`,但这个`$route`是保留字，暂无无法使用
 - 其次，当前路由的常用参数，被放在当前路由的`.value`里面，也就是等于vue中的`$route => route.value`
+- 根据 [vue-router-next核心开发者@posva ](https://github.com/vuejs/vue-router-next/issues/128#issuecomment-596697188) 说，`redirect:'/foo'` 必须是斜杠开头, `redirect:'bar'` 是非法的。（但[vue-router](https://github.com/vuejs/vue-router/blob/dev/examples/redirect/app.js#L19-L29)中是合法的）
 
 ## vue-router-next 路由使用
 
