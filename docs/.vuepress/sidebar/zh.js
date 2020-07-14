@@ -5,10 +5,10 @@
  * */
 
 const introductionLinks = [
-	{title: "Overview", type: "group", link: "/v3/guide/team"},
+	{title: "Overview", type: "group", link: "/guide/team"},
 ];
 module.exports = {
-	'/v3/': [
+	'/': [
 		{
 			title: '简介',
 			collapsable: false,

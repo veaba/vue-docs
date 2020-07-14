@@ -9,31 +9,31 @@ module.exports = [
 		text: '前瞻TODO',
 		items: [
 			{
-				text: '源码解读@vue', link: '/v3/source/',
+				text: '源码解读@vue', link: '/source/',
 			},
 			{
-				text: '  ->@vue/compile-dom', link: '/v3/source/compile-dom',
+				text: '  ->@vue/compile-dom', link: '/source/compile-dom',
 			},
 			{
-				text: '  ->@vue/compile-core', link: '/v3/source/compile-core',
+				text: '  ->@vue/compile-core', link: '/source/compile-core',
 			},
 			{
-				text: '  ->@vue/compile-sfc', link: '/v3/source/compile-sfc',
+				text: '  ->@vue/compile-sfc', link: '/source/compile-sfc',
 			},
 			{
-				text: '  ->@vue/runtime-core', link: '/v3/source/runtime-core',
+				text: '  ->@vue/runtime-core', link: '/source/runtime-core',
 			},
 			{
-				text: '  ->@vue/runtime-dom', link: '/v3/source/runtime-dom',
+				text: '  ->@vue/runtime-dom', link: '/source/runtime-dom',
 			},
 			{
-				text: '  ->@vue/reactivity', link: '/v3/source/reactivity',
+				text: '  ->@vue/reactivity', link: '/source/reactivity',
 			},
 			{
-				text: '  ->@vue/server-render', link: '/v3/source/server-render',
+				text: '  ->@vue/server-render', link: '/source/server-render',
 			},
 			{
-				text: '  ->@vue/shared', link: '/v3/source/shared',
+				text: '  ->@vue/shared', link: '/source/shared',
 			},
 			{
 				text: '生态圈兼容情况', link: '/ecosystems/compatible/',
@@ -48,13 +48,13 @@ module.exports = [
 			{
 				text: '文档',
 				items: [
-					{text: '教程', link: '/v3/guide/'},
-					{text: 'vue-router-next', link: '/v3/router/'},
-					{text: 'transition',link:'/v3/guide/transition/'},
-					{text: 'API', link: '/v3/api/'},
-					{text: '风格指南', link: '/v3/style-guide/'},
-					{text: '示例', link: '/v3/examples/'},
-					{text: 'Cookbook', link: '/v3/cookbook/'},
+					{text: '教程', link: '/guide/'},
+					{text: 'vue-router-next', link: '/router/'},
+					{text: 'transition',link:'/guide/transition/'},
+					{text: 'API', link: '/api/'},
+					{text: '风格指南', link: '/style-guide/'},
+					{text: '示例', link: '/examples/'},
+					{text: 'Cookbook', link: '/cookbook/'},
 				]
 			}
 		]
@@ -99,7 +99,7 @@ module.exports = [
 	},
 	{
 		text: '团队',
-		link:'/v3/team/'
+		link:'/team/'
 	},
 	{
 		text: '资源列表',
