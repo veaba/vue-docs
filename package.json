@@ -4,8 +4,10 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "dev-vite": "npx vitepress dev docs",
-    "build-vite": "npx vitepress build docs"
+    "dev-vite-native": "npx vitepress dev docs",
+    "build-vite-native": "npx vitepress build docs",
+    "dev-vite": "node vitepress/bin/vitepress.js dev docs",
+    "build-vite": "node vitepress/bin/vitepress.js build docs"
   },
   "devDependencies": {
     "vuepress-plugin-container": "^2.0.2",
