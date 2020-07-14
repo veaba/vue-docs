@@ -2,7 +2,7 @@
 home: true
 heroImage: /images/logo.png
 actionText: Get Started →
-actionLink: /v3/guide/
+actionLink: /guide/
 footer: MIT Licensed | Copyright © 2020-present Veaba
 ---
 <div style="text-align: center;font-size: 32px">
