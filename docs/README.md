@@ -5,8 +5,9 @@ actionText: Get Started →
 actionLink: /guide/
 footer: MIT Licensed | Copyright © 2020-present Veaba
 ---
+
 <div style="text-align: center;font-size: 32px">
-The Vue III is coming
+<a href="/blog/vue-release-3.0">Vue 3 Release: One Piece</a>
 </div>
 
 <div class="features">
@@ -27,39 +28,37 @@ The Vue III is coming
 </div>
 
 ## 快速使用
-``` bash
+
+```bash
 # Clone the Vue 3 preview webpack project
-git clone https://github.com/vuejs/vue-next-webpack-preview.git 
+git clone https://github.com/vuejs/vue-next-webpack-preview.git
 
 # install
-npm install 
+npm install
 
 # or yarn
 yarn
 
-# run 
+# run
 npm run dev
 
 ```
 
-### 如何使用Vue 3(How use it）?
-```js
-import {createApp} from "vue" // import createApp
-import App from "./App.vue"   // A vue component
-createApp(App).mount("#app")  // Bind component on dom alpha-3=> createApp.mount(App,"#app")
+### 如何使用 Vue 3(How use it）?
 
+```js
+import { createApp } from "vue"; // import createApp
+import App from "./App.vue"; // A vue component
+createApp(App).mount("#app"); // Bind component on dom alpha-3=> createApp.mount(App,"#app")
 ```
 
 ### 注意
+
 ::: warning 特别说明：
-Vue 3 依然在开发中，SSR部分依然未完成开发，官方文档也未释出，你所看到的这个网站是[@veaba](https://github.com/veaba) 瞎搞的
+Vue 3 依然在开发中，SSR 部分依然未完成开发，官方文档也未释出，你所看到的这个网站是[@veaba](https://github.com/veaba) 瞎搞的
 :::
 
 ## 已知问题
 
-- 当前无法通过Vue.prototype附加自定义实例属性。
-- 当前的实现要求在运行时环境中使用原生ES2015+，但还不支持IE11。
-  
-
-
-
+- 当前无法通过 Vue.prototype 附加自定义实例属性。
+- 当前的实现要求在运行时环境中使用原生 ES2015+，但还不支持 IE11。
