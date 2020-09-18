@@ -21,6 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: 步骤：第二步 -> 安装依赖
         run: |
+          rm -rf node_modules
           npm install
           npm run build
         env:
