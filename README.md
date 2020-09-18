@@ -1,3 +1,5 @@
+![Vue-docs CI](https://github.com/veaba/vue-docs/workflows/Vue-docs%20CI/badge.svg)
+
 # Vue 3 docs
 
 > 个人仿照Vue 2 版本的docs 进行学习性质的描述Vue 3的docs
