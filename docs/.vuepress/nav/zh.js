@@ -5,6 +5,15 @@
  * @status todo
  ***********************/
 module.exports = [
+
+	{
+		text:'博客',
+		items:[
+			{
+				text: 'Vue 3.0 release： One Piece', link: '/blog/vue-release-3.0/',
+			},
+		]
+	},
 	{
 		text: '前瞻TODO',
 		items: [
@@ -97,10 +106,10 @@ module.exports = [
 		
 		]
 	},
-	{
-		text: '团队',
-		link:'/team/'
-	},
+	// {
+	// 	text: '团队',
+	// 	link:'/team/'
+	// },
 	{
 		text: '资源列表',
 		ariaLabel: 'Language Menu',
@@ -111,25 +120,25 @@ module.exports = [
 			{text: '浏览和Vue 相关的包',link:'https://awesomejs.dev/for/vue/'},
 		]
 	},
-	{
-		text: '支持Vue',
-		ariaLabel: 'Language Menu',
-		items: [
-			{text: '一次性赞助',link:'https://cn.vuejs.org/support-vuejs/#One-time-Donations'},
-			{text: '周期性赞助',link:'https://cn.vuejs.org/support-vuejs/#Recurring-Pledges'},
-			{text: '贴纸',link:'https://www.smallsticker.com/%E8%B4%B4%E7%BA%B8/vue.html'},
-			{text: '周边',link:'https://osholic.com/?utm_source=vue&utm_medium=dropdown'},
-			{text: 'T恤商店',link:'https://vue.threadless.com/'},
-		]
-	},
-	{
-		text: '多语言TODO',
-		ariaLabel: 'Language Menu',
-		items: [
-			{text: 'English',link:'https://vuejs.org/index.html'},
-			{text: '中文简体',link:'https://cn.vuejs.org/index.html'},
-		]
-	},
+	// {
+	// 	text: '支持Vue',
+	// 	ariaLabel: 'Language Menu',
+	// 	items: [
+	// 		{text: '一次性赞助',link:'https://cn.vuejs.org/support-vuejs/#One-time-Donations'},
+	// 		{text: '周期性赞助',link:'https://cn.vuejs.org/support-vuejs/#Recurring-Pledges'},
+	// 		{text: '贴纸',link:'https://www.smallsticker.com/%E8%B4%B4%E7%BA%B8/vue.html'},
+	// 		{text: '周边',link:'https://osholic.com/?utm_source=vue&utm_medium=dropdown'},
+	// 		{text: 'T恤商店',link:'https://vue.threadless.com/'},
+	// 	]
+	// },
+	// {
+	// 	text: '多语言TODO',
+	// 	ariaLabel: 'Language Menu',
+	// 	items: [
+	// 		{text: 'English',link:'https://vuejs.org/index.html'},
+	// 		{text: '中文简体',link:'https://cn.vuejs.org/index.html'},
+	// 	]
+	// },
 	{
 		text: '关于',
 		link: '/about'
