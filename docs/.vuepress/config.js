@@ -26,25 +26,7 @@ module.exports = {
 			}
 		}
 	},
-	// vuepress-plugin-container 容器
-	plugins: [
-		// tip
-		['container', {
-			type: 'tip',
-			before: title => `<div class="tip custom-block"> <p class="title">${title}</p>`,
-			after: '</div>'
-		}],
-		['container', {
-			type: 'warning',
-			before: title => `<div class="warning custom-block"> <p class="title">${title}</p>`,
-			after: '</div>'
-		}],
-		['container', {
-			type: 'danger',
-			before: title => `<div class="danger custom-block"> <p class="title">${title}</p>`,
-			after: '</div>'
-		}],
-	],
+
 	extraWatchFiles: [
 		// '.vuepress/nav/en.js',
 		'.vuepress/nav/zh.js',
@@ -63,7 +45,7 @@ function getGuideSidebar () {
 			title: '基础',
 			collapsable: false,
 			children: [
-				'getting-started',
+				'',
 			]
 		}
 	]
