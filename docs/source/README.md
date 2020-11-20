@@ -2,8 +2,31 @@
 
 > by @veaba
 >
->
 
+## 包的依赖关系
+
+```
+                         +---------------------+
+                         |                     |
+                         |  @vue/compiler-sfc  |
+                         |                     |
+                         +-----+--------+------+
+                               |        |
+                               v        v
+             +-------------------+    +---------------------+
+             |                   |    |                     |
+     +------>| @vue/compiler-dom +--->| @vue/compiler-core  |
+     |       |                   |    |                     |
++----+----+  +-------------------+    +---------------------+
+|         |
+|   vue   |
+|         |
++----+----+  +-------------------+    +--------------------+    +------------------+
+     |       |                   |    |                    |    |                  |
+     +------>|  @vue/runtime-dom +--->| @vue/runtime-core  +--->| @vue/reactivity  |
+             |                   |    |                    |    |                  |
+             +-------------------+    +--------------------+    +------------------+
+```
 ## 相关链接
 - [Vue-next Repo](https://github.com/vuejs/vue-next)
 - [Vue-next docs,by@veaba](https://github.com/veaba/vue-docs)
@@ -12,10 +35,12 @@
     - [@Vue/compile-core](/source/compile-core)
     - [@Vue/compile-dom](/source/compile-dom)
     - [@Vue/compile-sfc](/source/compile-sfc)
+    - [@Vue/compile-ssr](/source/compile-ssr)
     - [@Vue/reactivity](/source/reactivity)
     - [@Vue/runtime-core](/source/runtime-core)
     - [@Vue/runtime-dom](/source/runtime-dom)
-    - [@Vue/shared](/source/shared)
+    - [@Vue/runtime-test](/source/runtime-test)
+    - [@Vue/shared](/source/shared) 共享包、工具包
 
 ## Class Vue
 

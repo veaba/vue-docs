@@ -21,13 +21,19 @@ module.exports = [
 				text: '源码解读@vue', link: '/source/',
 			},
 			{
-				text: '  ->@vue/compile-dom', link: '/source/compile-dom',
-			},
-			{
 				text: '  ->@vue/compile-core', link: '/source/compile-core',
 			},
 			{
+				text: '  ->@vue/compile-dom', link: '/source/compile-dom',
+			},
+			{
 				text: '  ->@vue/compile-sfc', link: '/source/compile-sfc',
+			},
+			{
+				text: '  ->@vue/compile-ssr', link: '/source/compile-ssr',
+			},
+			{
+				text: '  ->@vue/reactivity', link: '/source/reactivity',
 			},
 			{
 				text: '  ->@vue/runtime-core', link: '/source/runtime-core',
@@ -35,15 +41,15 @@ module.exports = [
 			{
 				text: '  ->@vue/runtime-dom', link: '/source/runtime-dom',
 			},
-			{
-				text: '  ->@vue/reactivity', link: '/source/reactivity',
+						{
+				text: '  ->@vue/runtime-test', link: '/source/runtime-test',
 			},
 			{
 				text: '  ->@vue/server-render', link: '/source/server-render',
 			},
 			{
 				text: '  ->@vue/shared', link: '/source/shared',
-			},
+			},		
 			{
 				text: '生态圈兼容情况', link: '/ecosystems/compatible/',
 			}
