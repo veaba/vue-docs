@@ -32,15 +32,22 @@
 - [Vue-next docs,by@veaba](https://github.com/veaba/vue-docs)
 - [Vue-composition-api](https://vue-composition-api-rfc.netlify.com/#api-introduction)
 - [Vue-next 添加注释>branch:veaba](https://github.com/veaba/vue-next)
-    - [@Vue/compile-core](/source/compile-core)
+    - [@Vue/compile-core](/source/compile-core)  
     - [@Vue/compile-dom](/source/compile-dom)
     - [@Vue/compile-sfc](/source/compile-sfc)
     - [@Vue/compile-ssr](/source/compile-ssr)
     - [@Vue/reactivity](/source/reactivity)
+        - 响应式系统，独立框架使用。
     - [@Vue/runtime-core](/source/runtime-core)
+        - 平台无关的运行时核心。包括虚拟 dom 渲染器、组件实现和JavaScript api的代码。可以使用此包创建针对特定平台的高阶运行时（即自定义渲染器）。
     - [@Vue/runtime-dom](/source/runtime-dom)
+        - 以浏览器为目标的运行时。包括本地 DOM API、attribute、property、事件处理程序等的处理。
     - [@Vue/runtime-test](/source/runtime-test)
-    - [@Vue/shared](/source/shared) 共享包、工具包
+        - 用于测试的轻量级运行时。可以在任何 JavaScript 环境中使用，因为它"渲染"纯JavaScript对象树。树可用于断言正确的渲染输出。还提供用于序列化树、触发事件和记录更新期间执行的实际节点操作的实用程序。
+    - [@Vue/shared](/source/shared)
+        - 共享包、工具包
+    - [@Vue/server-renderer]
+        - 服务端渲染
 
 ## Class Vue
 
