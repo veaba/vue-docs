@@ -97,3 +97,12 @@
 ## 主要功能
 
 - AST vue语法树,虚拟出来的dom
+
+### 编译优化
+
+```
+
+new Vue ---> init ---> $mount ---> $compile ---> render ---> vnode ---> patch ---> DOM  
+
+
+```

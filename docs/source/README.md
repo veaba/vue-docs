@@ -32,10 +32,13 @@
 - [Vue-next docs,by@veaba](https://github.com/veaba/vue-docs)
 - [Vue-composition-api](https://vue-composition-api-rfc.netlify.com/#api-introduction)
 - [Vue-next 添加注释>branch:veaba](https://github.com/veaba/vue-next)
-    - [@Vue/compile-core](/source/compile-core)  
+    - [@Vue/compile-core](/source/compile-core)
+        - 平台无关的编译器内核。包括编译器的可扩展基础和所有与平台无关的插件。
     - [@Vue/compile-dom](/source/compile-dom)
+        - 编译器，带有专门针对浏览器的附加插件。
     - [@Vue/compile-sfc](/source/compile-sfc)
     - [@Vue/compile-ssr](/source/compile-ssr)
+        - 生成为服务器端渲染而优化的渲染函数的编译器。
     - [@Vue/reactivity](/source/reactivity)
         - 响应式系统，独立框架使用。
     - [@Vue/runtime-core](/source/runtime-core)
@@ -46,8 +49,19 @@
         - 用于测试的轻量级运行时。可以在任何 JavaScript 环境中使用，因为它"渲染"纯JavaScript对象树。树可用于断言正确的渲染输出。还提供用于序列化树、触发事件和记录更新期间执行的实际节点操作的实用程序。
     - [@Vue/shared](/source/shared)
         - 共享包、工具包
-    - [@Vue/server-renderer]
+    - [@Vue/server-renderer](/source/server-renderer)
         - 服务端渲染
+    - [@vue/template-explorer](/source/template-explorer)
+        - 用于调试编译器输出的开发工具。你可以运行 `yarn dev template-explorer` 并打开其 `index.html` 获取基于当前源代码的模板编译的repl。
+
+## Vue 3.0 优化过程
+
+- 数据劫持
+- 编译优化
+    - Block Tree
+- 语法 API：Composition API
+    - 优化组织逻辑复用
+
 
 ## Class Vue
 
