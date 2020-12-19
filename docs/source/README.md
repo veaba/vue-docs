@@ -16,6 +16,7 @@
     - [@Vue/runtime-core](/source/runtime-core)
     - [@Vue/runtime-dom](/source/runtime-dom)
     - [@Vue/shared](/source/shared)
+    - [@Vue](/source/vue)
 
 ## Class Vue
 
