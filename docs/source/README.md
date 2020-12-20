@@ -53,7 +53,7 @@
         - 服务端渲染
     - [@vue/template-explorer](/source/template-explorer)
         - 用于调试编译器输出的开发工具。你可以运行 `yarn dev template-explorer` 并打开其 `index.html` 获取基于当前源代码的模板编译的repl。
-    - [@vue][/source/vue]
+    - [@vue](/source/vue)
 
 ## Vue 3.0 优化过程
 
@@ -63,6 +63,11 @@
 - 语法 API：Composition API
     - 优化组织逻辑复用
 
+## 归类化 Vue
+
+- Vue 内部使用的原生 dom 选择器是 `document.querySelector(container)`
+
+- 
 
 ## Class Vue
 
