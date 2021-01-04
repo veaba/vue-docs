@@ -67,8 +67,40 @@
 
 - Vue 内部使用的原生 dom 选择器是 `document.querySelector(container)`
 
-- 
+- 开发模式下 `injectNativeTagCheck` 注入原生 tag 检查
 
+- `createApp` 和 `createSSRApp` 是两个函数，后者不提前处理 `container.innerHTML`，前者是要清空，且移除 attr `v-cloak` 和重置 `data-v-app`
+
+- `ensureRenderer` 函数
+
+- `mount` 函数
+
+- `data` 函数是由 `resolveData` 函数来完成
+
+- 如果 `data` 返回一个 promise，vue 会警告你不要这么做，如果你打算在组件渲染之前执行数据获取，请使用 `async setup()`
+
+```js
+ data(){
+    return Promise.resolve(1)
+},
+```
+
+- `data` 如果不是一个 `object`，会被警告
+
+- 如果已存在 `data`，则这是一个 `mixin` 或 `extends`
+
+- vue 内置组件
+
+    - `BaseTransition.ts`
+    - `KeepAlive`
+    - `Suspense`
+    - `Teleport`
+
+- Vue 3 中  `ref` 与 `reactive` 的区别
+
+    - ref 底层调用 reactive
+
+    - ref  有对shallow 处理，以及 track 、trigger 的处理
 ## Class Vue
 
 ------------------------------------------------------------

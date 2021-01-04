@@ -33,7 +33,7 @@ module.exports = [
 				text: '  ->@vue/compile-ssr', link: '/source/compile-ssr',
 			},
 			{
-				text: '  ->@vue/reactivity', link: '/source/reactivity',
+				text: '  ->@vue/reactivity', link: '/source/reactivity/',
 			},
 			{
 				text: '  ->@vue/runtime-core', link: '/source/runtime-core',
