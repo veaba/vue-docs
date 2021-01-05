@@ -9,6 +9,13 @@
 | computed   | [computed](computed) |
 |            |                      |
 
+
+- `ref` 与 `reactive` 关系
+
+  - ref 需要具体读取 `xx.value`
+  - reactive 不需要读取 `xx.value` 
+
+ 
 ## 结构
 
 Vue.js 3.0 的响应性系统目录结构如下：

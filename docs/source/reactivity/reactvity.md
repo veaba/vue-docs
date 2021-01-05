@@ -2,6 +2,8 @@
 
 ## reactive()
 
+- 参数必须是对象，否则报错, `value cannot be made reactive: xx`
+
 - 调用 `createReactiveObject`
 
 ````ts
@@ -90,6 +92,8 @@ function createReactiveObject(
 
 ## toRaw()
 
+- 如何理解 toRaw 函数？这个函数的意思是说，被响应化的变量存在一个私有的属性 `__v_raw`，原始的变量值就在这个 `__v_raw`下，toRaw 也只是把这个 `变量的.__v_raw` 提取出来而已，（TODO：但现在看不出再何处塞了这个原始值）
+
 ```ts
 /**
  * 返回 `reactive` 或 `readonly` proxy 的原始对象
@@ -161,4 +165,355 @@ def(value, "__v_skip" /* SKIP */, true);
  * }
  *
  */
+```
+
+## Test
+
+1. object
+
+```ts
+test("Object", () => {
+  const original = { foo: 1 };
+  const observed = reactive(original);
+  expect(observed).not.toBe(original);
+  expect(isReactive(observed)).toBe(true);
+  expect(isReactive(original)).toBe(false);
+  // get
+  expect(observed.foo).toBe(1);
+  // has
+  expect("foo" in observed).toBe(true);
+  // ownKeys
+  expect(Object.keys(observed)).toEqual(["foo"]);
+});
+```
+
+2. proto
+
+```ts
+test("proto", () => {
+  const obj = {};
+  const reactiveObj = reactive(obj);
+  expect(isReactive(reactiveObj)).toBe(true);
+  // read prop of reactiveObject will cause reactiveObj[prop] to be reactive
+  // @ts-ignore
+  const prototype = reactiveObj["__proto__"];
+  const otherObj = { data: ["a"] };
+  expect(isReactive(otherObj)).toBe(false);
+  const reactiveOther = reactive(otherObj);
+  expect(isReactive(reactiveOther)).toBe(true);
+  expect(reactiveOther.data[0]).toBe("a");
+});
+```
+
+3. 嵌套响应式
+
+```ts
+test("nested reactives", () => {
+  const original = {
+    nested: {
+      foo: 1,
+    },
+    array: [{ bar: 2 }],
+  };
+  const observed = reactive(original);
+  expect(isReactive(observed.nested)).toBe(true);
+  expect(isReactive(observed.array)).toBe(true);
+  expect(isReactive(observed.array[0])).toBe(true);
+});
+```
+
+4. 可观测可迭代集合(Map,Set) 的子类型
+
+```ts
+test("observing subtypes of IterableCollections(Map, Set)", () => {
+  // subtypes of Map
+  class CustomMap extends Map {}
+  const cmap = reactive(new CustomMap());
+
+  expect(cmap instanceof Map).toBe(true);
+  expect(isReactive(cmap)).toBe(true);
+
+  cmap.set("key", {});
+  expect(isReactive(cmap.get("key"))).toBe(true);
+
+  // subtypes of Set
+  class CustomSet extends Set {}
+  const cset = reactive(new CustomSet());
+
+  expect(cset instanceof Set).toBe(true);
+  expect(isReactive(cset)).toBe(true);
+
+  let dummy;
+  effect(() => (dummy = cset.has("value")));
+  expect(dummy).toBe(false);
+  cset.add("value");
+  expect(dummy).toBe(true);
+  cset.delete("value");
+  expect(dummy).toBe(false);
+});
+```
+
+5. 可观测 WeakCollections 集合(WeakMap,WeakSet) 的子类型
+
+```ts
+test("observing subtypes of WeakCollections(WeakMap, WeakSet)", () => {
+  // subtypes of WeakMap
+  class CustomMap extends WeakMap {}
+  const cmap = reactive(new CustomMap());
+
+  expect(cmap instanceof WeakMap).toBe(true);
+  expect(isReactive(cmap)).toBe(true);
+
+  const key = {};
+  cmap.set(key, {});
+  expect(isReactive(cmap.get(key))).toBe(true);
+
+  // subtypes of WeakSet
+  class CustomSet extends WeakSet {}
+  const cset = reactive(new CustomSet());
+
+  expect(cset instanceof WeakSet).toBe(true);
+  expect(isReactive(cset)).toBe(true);
+
+  let dummy;
+  effect(() => (dummy = cset.has(key)));
+  expect(dummy).toBe(false);
+  cset.add(key);
+  expect(dummy).toBe(true);
+  cset.delete(key);
+  expect(dummy).toBe(false);
+});
+```
+
+6. 观察值应代理变更到原始的（对象）
+
+```ts
+test("observed value should proxy mutations to original (Object)", () => {
+  const original: any = { foo: 1 };
+  const observed = reactive(original);
+  // set
+  observed.bar = 1;
+  expect(observed.bar).toBe(1);
+  expect(original.bar).toBe(1);
+  // delete
+  delete observed.foo;
+  expect("foo" in observed).toBe(false);
+  expect("foo" in original).toBe(false);
+});
+```
+
+7. 原始值的变化应该反映到观测者上(object)
+
+```ts
+test("original value change should reflect in observed value (Object)", () => {
+  const original: any = { foo: 1 };
+  const observed = reactive(original);
+  // set
+  original.bar = 1;
+  expect(original.bar).toBe(1);
+  expect(observed.bar).toBe(1);
+  // delete
+  delete original.foo;
+  expect("foo" in original).toBe(false);
+  expect("foo" in observed).toBe(false);
+});
+```
+
+8. 设置一个未观测到值的属性，应该用响应式的方式来包装
+
+```ts
+test("setting a property with an unobserved value should wrap with reactive", () => {
+  const observed = reactive<{ foo?: object }>({});
+  const raw = {};
+  observed.foo = raw;
+  expect(observed.foo).not.toBe(raw);
+  expect(isReactive(observed.foo)).toBe(true);
+});
+```
+
+9. 观测到已观测到的值应该返回相同的 proxy
+
+```ts
+test("observing already observed value should return same Proxy", () => {
+  const original = { foo: 1 };
+  const observed = reactive(original);
+  const observed2 = reactive(observed);
+  expect(observed2).toBe(observed);
+});
+```
+
+10. 多次观察相同的值应该返回相同的 Proxy。
+
+```ts
+test("observing the same value multiple times should return same Proxy", () => {
+  const original = { foo: 1 };
+  const observed = reactive(original);
+  const observed2 = reactive(original);
+  expect(observed2).toBe(observed);
+});
+```
+
+11. 不应该用 Proxy 污染原始对象。
+
+```ts
+test("should not pollute original object with Proxies", () => {
+  const original: any = { foo: 1 };
+  const original2 = { bar: 2 };
+  const observed = reactive(original);
+  const observed2 = reactive(original2);
+  observed.bar = observed2;
+  expect(observed.bar).toBe(observed2);
+  expect(original.bar).toBe(original2);
+});
+```
+
+12. 原始对象转换 toRaw
+
+```ts
+test("toRaw", () => {
+  const original = { foo: 1 };
+  const observed = reactive(original);
+  expect(toRaw(observed)).toBe(original);
+  expect(toRaw(original)).toBe(original);
+});
+```
+
+13. 在对象上使用 reactive 作为原型的 toRaw。
+
+```ts
+test("toRaw on object using reactive as prototype", () => {
+  const original = reactive({});
+  const obj = Object.create(original);
+  const raw = toRaw(obj);
+  expect(raw).toBe(obj);
+  expect(raw).not.toBe(toRaw(original));
+});
+```
+
+14. 不应该解构 Ref<T>
+
+```ts
+test("should not unwrap Ref<T>", () => {
+  const observedNumberRef = reactive(ref(1));
+  const observedObjectRef = reactive(ref({ foo: 1 }));
+
+  expect(isRef(observedNumberRef)).toBe(true);
+  expect(isRef(observedObjectRef)).toBe(true);
+});
+```
+
+15. 应该解构 computed refs
+
+```ts
+test("should unwrap computed refs", () => {
+  // readonly
+  const a = computed(() => 1);
+  // writable
+  const b = computed({
+    get: () => 1,
+    set: () => {},
+  });
+  const obj = reactive({ a, b });
+  // check type
+  obj.a + 1;
+  obj.b + 1;
+  expect(typeof obj.a).toBe(`number`);
+  expect(typeof obj.b).toBe(`number`);
+});
+```
+
+16. 应允许将一个 ref 的属性设置为另一个 ref。
+
+```ts
+test("should allow setting property from a ref to another ref", () => {
+  const foo = ref(0);
+  const bar = ref(1);
+  const observed = reactive({ a: foo });
+  const dummy = computed(() => observed.a);
+  expect(dummy.value).toBe(0);
+
+  // @ts-ignore
+  observed.a = bar;
+  expect(dummy.value).toBe(1);
+
+  bar.value++;
+  expect(dummy.value).toBe(2);
+});
+```
+
+17. 不可观测的值
+
+```ts
+test("non-observable values", () => {
+  const assertValue = (value: any) => {
+    reactive(value);
+    expect(
+      `value cannot be made reactive: ${String(value)}`
+    ).toHaveBeenWarnedLast();
+  };
+
+  // number
+  assertValue(1);
+  // string
+  assertValue("foo");
+  // boolean
+  assertValue(false);
+  // null
+  assertValue(null);
+  // undefined
+  assertValue(undefined);
+  // symbol
+  const s = Symbol();
+  assertValue(s);
+
+  // built-ins should work and return same value
+  const p = Promise.resolve();
+  expect(reactive(p)).toBe(p);
+  const r = new RegExp("");
+  expect(reactive(r)).toBe(r);
+  const d = new Date();
+  expect(reactive(d)).toBe(d);
+});
+```
+
+18. 让参数不会被响应式化
+
+```ts
+test("markRaw", () => {
+  const obj = reactive({
+    foo: { a: 1 },
+    bar: markRaw({ b: 2 }),
+  });
+  expect(isReactive(obj.foo)).toBe(true);
+  expect(isReactive(obj.bar)).toBe(false);
+});
+```
+
+19. 不可观测到不可拓展的对象
+
+```ts
+test("should not observe non-extensible objects", () => {
+  const obj = reactive({
+    foo: Object.preventExtensions({ a: 1 }),
+    // sealed or frozen objects are considered non-extensible as well
+    bar: Object.freeze({ a: 1 }),
+    baz: Object.seal({ a: 1 }),
+  });
+  expect(isReactive(obj.foo)).toBe(false);
+  expect(isReactive(obj.bar)).toBe(false);
+  expect(isReactive(obj.baz)).toBe(false);
+});
+```
+
+20. 如果对象有 `__v_skip`，将不会被观测到
+
+```ts
+test("should not observe objects with __v_skip", () => {
+  const original = {
+    foo: 1,
+    __v_skip: true,
+  };
+  const observed = reactive(original);
+  expect(isReactive(observed)).toBe(false);
+});
 ```
