@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # ShallowReactive
 
 - 根 property 实现响应式

@@ -4,18 +4,19 @@
 
 下面是个人在翻写的过程中，得出一些心得，现在总结下，以便加上理解。
 
-| 响应性模块 | 链接                 |
-| ---------- | -------------------- |
-| computed   | [computed](computed) |
-|            |                      |
-
+| 响应性模块      | 链接                               |
+| --------------- | ---------------------------------- |
+| computed        | [computed](computed)               |
+| effect          | [effect](effect)                   |
+| reactivity      | [reactivity](reactivity)           |
+| ref             | [ref](ref)                         |
+| shallowReactive | [shallowReactive](shallowreactive) |
 
 - `ref` 与 `reactive` 关系
 
   - ref 需要具体读取 `xx.value`
-  - reactive 不需要读取 `xx.value` 
+  - reactive 不需要读取 `xx.value`
 
- 
 ## 结构
 
 Vue.js 3.0 的响应性系统目录结构如下：

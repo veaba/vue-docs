@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # Effect
 
 - 跟中属性变化并调用回调函数

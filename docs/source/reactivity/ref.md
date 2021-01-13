@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # Ref
 
 - 需要重 `.value` 读值
