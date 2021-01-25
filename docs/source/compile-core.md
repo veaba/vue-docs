@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # 源码解读@vue/compile-core
 
     开始时间：2020年1月17日09:53:36
@@ -6,39 +10,39 @@
 
 ## 目录
 
-|-- package.json
 ```text
-|-- api-extractor.json                  // 一个json文件，不知干啥
-|-- index.js                            // dev->./dist/compile-core.cjs.js、pro->./dist/compile-core.cjs.prod.js
-|-- LICENSE                             //
-|-- README.md                           //
-|-- package.json                        //
-|-- __test__                            // 测试
-|-- dist                                // 打包出来的文件
-`-- src                                 //
-    |-- ast.ts                          //
-    |-- codegen.ts                      //
-    |-- compile.ts                      //
-    |-- errors.ts                       //
-    |-- index.ts                        //
-    |-- options.ts                      //
-    |-- parse.ts                        //
-    |-- runtimeHelpers.ts               //
-    |-- transform.ts                    //
-    |-- transforms                      //
-    |   |-- hoistStatic.ts              //
-    |   |-- transformElement.ts         //
-    |   |-- transformExpression.ts      //
-    |   |-- transformSlotOutlet.ts      //
-    |   |-- transformText.ts            //
-    |   |-- vBind.ts                    //
-    |   |-- vFor.ts                     //
-    |   |-- vIf.ts                      //
-    |   |-- vModel.ts                   //
-    |   |-- vOn.ts                      //
-    |   |-- vOnce.ts                    //
-    |   `-- vSlot.ts                    //
-    `-- utils.ts                        //
+|-- package.json
+|-- api-extractor.json               // 一个json文件，不知干啥
+|-- index.js                         // dev-> compile-core.cjs.js、 
+|-- LICENSE                          //
+|-- README.md                        //
+|-- package.json                     //
+|-- __test__                         // 测试
+|-- dist                             // 打包出来的文件
+-- src                               //
+    |-- ast.ts                       //
+    |-- codegen.ts                   //
+    |-- compile.ts                   //
+    |-- errors.ts                    //
+    |-- index.ts                     //
+    |-- options.ts                   //
+    |-- parse.ts                     //
+    |-- runtimeHelpers.ts            //
+    |-- transform.ts                 //
+    |-- transforms                   //
+    |   |-- hoistStatic.ts           //
+    |   |-- transformElement.ts      //
+    |   |-- transformExpression.ts   //
+    |   |-- transformSlotOutlet.ts   //
+    |   |-- transformText.ts         //
+    |   |-- vBind.ts                 //
+    |   |-- vFor.ts                  //
+    |   |-- vIf.ts                   //
+    |   |-- vModel.ts                //
+    |   |-- vOn.ts                   //
+    |   |-- vOnce.ts                 //
+    |   |-- vSlot.ts                 //
+    |-- utils.ts                     //
 ```
 
 ## 对外暴露文件index.ts

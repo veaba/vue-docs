@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # 源码解读@vue/compile-sfc
 
 编译`.vue` 单文件组件程序

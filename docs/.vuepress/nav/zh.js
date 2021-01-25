@@ -5,10 +5,9 @@
  * @status todo
  ***********************/
 module.exports = [
-
 	{
-		text:'博客',
-		items:[
+		text: '博客',
+		items: [
 			{
 				text: 'Vue 3.0 release： One Piece', link: '/blog/vue-release-3.0/',
 			},
@@ -21,7 +20,10 @@ module.exports = [
 				text: '源码解读@vue', link: '/source/',
 			},
 			{
-				text: '  ->@vue/compile-core', link: '/source/compile-core',
+				text: '  ->@vue/runtime-core', link: '/source/runtime-core/',
+			},
+			{
+				text: '  ->@vue/compile-core', link: '/source/compile-core/',
 			},
 			{
 				text: '  ->@vue/compile-dom', link: '/source/compile-dom',
@@ -36,12 +38,9 @@ module.exports = [
 				text: '  ->@vue/reactivity', link: '/source/reactivity/',
 			},
 			{
-				text: '  ->@vue/runtime-core', link: '/source/runtime-core',
-			},
-			{
 				text: '  ->@vue/runtime-dom', link: '/source/runtime-dom',
 			},
-						{
+			{
 				text: '  ->@vue/runtime-test', link: '/source/runtime-test',
 			},
 			{
@@ -49,7 +48,7 @@ module.exports = [
 			},
 			{
 				text: '  ->@vue/shared', link: '/source/shared',
-			},		
+			},
 			{
 				text: '生态圈兼容情况', link: '/ecosystems/compatible/',
 			}
@@ -65,7 +64,7 @@ module.exports = [
 				items: [
 					{text: '教程', link: '/guide/'},
 					{text: 'vue-router-next', link: '/router/'},
-					{text: 'transition',link:'/guide/transition/'},
+					{text: 'transition', link: '/guide/transition/'},
 					{text: 'API', link: '/api/'},
 					{text: '风格指南', link: '/style-guide/'},
 					{text: '示例', link: '/examples/'},
@@ -75,38 +74,38 @@ module.exports = [
 		]
 	},
 	{
-		text: '生态系统TODO',
+		text: '生态系统',
 		items: [
 			{
 				text: '帮助', items: [
-					{text: '论坛',link:'https://forum.vuejs.org/'},
-					{text: '聊天室',link:'https://chat.vuejs.org/'},
-					{text: '聚会',link:'https://events.vuejs.org/meetups/'}
+					{text: '论坛', link: 'https://forum.vuejs.org/'},
+					{text: '聊天室', link: 'https://chat.vuejs.org/'},
+					{text: '聚会', link: 'https://events.vuejs.org/meetups/'}
 				]
 			},
 			
 			
 			{
 				text: '工具', items: [
-					{text: 'Devtools',link:'https://github.com/vuejs/vue-devtools'},
-					{text: 'Vue CLI',link:'https://cli.vuejs.org/zh/'},
-					{text: 'Vue Loader',link:'https://vue-loader.vuejs.org/zh/'}
+					{text: 'Devtools', link: 'https://github.com/vuejs/vue-devtools'},
+					{text: 'Vue CLI', link: 'https://cli.vuejs.org/zh/'},
+					{text: 'Vue Loader', link: 'https://vue-loader.vuejs.org/zh/'}
 				]
 			},
 			
 			
 			{
 				text: '核心插件', items: [
-					{text: 'Vue Router',link:'https://router.vuejs.org/zh/'},
-					{text: 'Vuex',link:'https://vuex.vuejs.org/zh/'},
-					{text: 'Vue 服务端渲染',link:'https://ssr.vuejs.org/zh/'},
+					{text: 'Vue Router', link: 'https://router.vuejs.org/zh/'},
+					{text: 'Vuex', link: 'https://vuex.vuejs.org/zh/'},
+					{text: 'Vue 服务端渲染', link: 'https://ssr.vuejs.org/zh/'},
 				]
 			},
 			
 			
 			{
 				text: '信息', items: [
-					{text: '周刊',link:'https://news.vuejs.org/'},
+					{text: '周刊', link: 'https://news.vuejs.org/'},
 				]
 			},
 		
@@ -116,16 +115,16 @@ module.exports = [
 	// 	text: '团队',
 	// 	link:'/team/'
 	// },
-	{
-		text: '资源列表',
-		ariaLabel: 'Language Menu',
-		items: [
-			{text: '合作伙伴',link:'https://cn.vuejs.org/resources/partners.html'},
-			{text: '主题',link:'https://cn.vuejs.org/resources/themes.html'},
-			{text: 'Awesome Vue',link:'https://github.com/vuejs/awesome-vue'},
-			{text: '浏览和Vue 相关的包',link:'https://awesomejs.dev/for/vue/'},
-		]
-	},
+	// {
+	// 	text: '资源列表',
+	// 	ariaLabel: 'Language Menu',
+	// 	items: [
+	// 		{text: '合作伙伴',link:'https://cn.vuejs.org/resources/partners.html'},
+	// 		{text: '主题',link:'https://cn.vuejs.org/resources/themes.html'},
+	// 		{text: 'Awesome Vue',link:'https://github.com/vuejs/awesome-vue'},
+	// 		{text: '浏览和Vue 相关的包',link:'https://awesomejs.dev/for/vue/'},
+	// 	]
+	// },
 	// {
 	// 	text: '支持Vue',
 	// 	ariaLabel: 'Language Menu',

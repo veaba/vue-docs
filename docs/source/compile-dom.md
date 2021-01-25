@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # 源码解读@vue/compile-dom
 
     开始时间：2020年1月17日09:46:26

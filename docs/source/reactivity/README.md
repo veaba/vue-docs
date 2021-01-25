@@ -10,7 +10,7 @@
 | effect          | [effect](effect)                   |
 | reactivity      | [reactivity](reactivity)           |
 | ref             | [ref](ref)                         |
-| shallowReactive | [shallowReactive](shallowreactive) |
+| shallowReactive | [shallowReactive](shallowReactive) |
 
 - `ref` 与 `reactive` 关系
 

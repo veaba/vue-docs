@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # @vue/shared
 
 Vue其他模块共享的函数和常量，并未作为一个暗度的依赖包，构建时会其他依赖使用，会被做tree-shaking
