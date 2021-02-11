@@ -6,4 +6,6 @@
 
 - 函数`reactive`: 能够让某个对象生成响应式
 - 函数`createApp()`: 用以生成一个实例，取消以前的`new` 实例的方式
-- `computed`: 可以和以前一样用
+- `computed`: 可以和以前一样用。
+
+- `watch` 不再直接在 `reactivity` 系统中了。
