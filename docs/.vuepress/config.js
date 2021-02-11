@@ -10,6 +10,7 @@ module.exports = {
 	head:[
 		['link', { rel: 'shortcut icon',type: 'image/x-icon', href: '/favicon.ico' }]
 	],
+	plugins: [["vuepress-plugin-editable"]],
 	themeConfig: {
 		repo: 'veaba/vue-docs',
 		logo: '/images/logo.png',
