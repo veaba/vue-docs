@@ -9,6 +9,6 @@
     "vuepress": "^1.8.0"
   },
   "dependencies": {
-    "vuepress-plugin-editable": "^1.0.3"
+    "vuepress-plugin-editable": "^1.0.4"
   }
 }
