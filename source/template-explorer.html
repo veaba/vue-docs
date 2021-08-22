@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue.js 3 docs</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="description" content="Vue.js 3 ，最新前瞻中文文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.7e2863ad.css" as="style"><link rel="preload" href="/assets/js/app.277ec9ba.js" as="script"><link rel="preload" href="/assets/js/2.ea1fdfa4.js" as="script"><link rel="preload" href="/assets/js/39.13cde29f.js" as="script"><link rel="prefetch" href="/assets/js/10.ffa19b7b.js"><link rel="prefetch" href="/assets/js/11.3da9b001.js"><link rel="prefetch" href="/assets/js/12.14a0bb81.js"><link rel="prefetch" href="/assets/js/13.c538616e.js"><link rel="prefetch" href="/assets/js/14.e780386f.js"><link rel="prefetch" href="/assets/js/15.aa07acd2.js"><link rel="prefetch" href="/assets/js/16.df6c899b.js"><link rel="prefetch" href="/assets/js/17.d22b1d4c.js"><link rel="prefetch" href="/assets/js/18.8ca25a22.js"><link rel="prefetch" href="/assets/js/19.403ae082.js"><link rel="prefetch" href="/assets/js/20.34f72c42.js"><link rel="prefetch" href="/assets/js/21.4344a2df.js"><link rel="prefetch" href="/assets/js/22.b9d2922a.js"><link rel="prefetch" href="/assets/js/23.2725552d.js"><link rel="prefetch" href="/assets/js/24.8211d8dd.js"><link rel="prefetch" href="/assets/js/25.5f886377.js"><link rel="prefetch" href="/assets/js/26.650e797c.js"><link rel="prefetch" href="/assets/js/27.9a4921a8.js"><link rel="prefetch" href="/assets/js/28.f3939ab2.js"><link rel="prefetch" href="/assets/js/29.caed4f07.js"><link rel="prefetch" href="/assets/js/3.24e4ccdf.js"><link rel="prefetch" href="/assets/js/30.0073cff4.js"><link rel="prefetch" href="/assets/js/31.747f1c1a.js"><link rel="prefetch" href="/assets/js/32.12bbc205.js"><link rel="prefetch" href="/assets/js/33.8039f1fd.js"><link rel="prefetch" href="/assets/js/34.83eb6f78.js"><link rel="prefetch" href="/assets/js/35.b0226633.js"><link rel="prefetch" href="/assets/js/36.2cb6a626.js"><link rel="prefetch" href="/assets/js/37.ee0b1135.js"><link rel="prefetch" href="/assets/js/38.8b9f9d93.js"><link rel="prefetch" href="/assets/js/4.44503972.js"><link rel="prefetch" href="/assets/js/40.daefaa56.js"><link rel="prefetch" href="/assets/js/41.8f6ea17d.js"><link rel="prefetch" href="/assets/js/5.66fbf774.js"><link rel="prefetch" href="/assets/js/6.8be4315d.js"><link rel="prefetch" href="/assets/js/7.750949df.js"><link rel="prefetch" href="/assets/js/8.07c4ec9d.js"><link rel="prefetch" href="/assets/js/9.6a09e918.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7e2863ad.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo.png" alt="Vue.js 3 docs" class="logo"> <span class="site-name can-hide">Vue.js 3 docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/vue-release-3.0/" class="nav-link">
+  Vue 3.0 release： One Piece
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前瞻TODO" class="dropdown-title"><span class="title">前瞻TODO</span> <span class="arrow down"></span></button> <button type="button" aria-label="前瞻TODO" class="mobile-dropdown-title"><span class="title">前瞻TODO</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/source/" class="nav-link router-link-active">
+  源码解读@vue
+</a></li><li class="dropdown-item"><!----> <a href="/source/runtime-core/" class="nav-link">
+    -&gt;@vue/runtime-core
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-core/" class="nav-link">
+    -&gt;@vue/compile-core
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-dom.html" class="nav-link">
+    -&gt;@vue/compile-dom
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-sfc.html" class="nav-link">
+    -&gt;@vue/compile-sfc
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-ssr.html" class="nav-link">
+    -&gt;@vue/compile-ssr
+</a></li><li class="dropdown-item"><!----> <a href="/source/reactivity/" class="nav-link">
+    -&gt;@vue/reactivity
+</a></li><li class="dropdown-item"><!----> <a href="/source/runtime-dom.html" class="nav-link">
+    -&gt;@vue/runtime-dom
+</a></li><li class="dropdown-item"><!----> <a href="/source/runtime-test.html" class="nav-link">
+    -&gt;@vue/runtime-test
+</a></li><li class="dropdown-item"><!----> <a href="/source/server-render.html" class="nav-link">
+    -&gt;@vue/server-render
+</a></li><li class="dropdown-item"><!----> <a href="/source/shared.html" class="nav-link">
+    -&gt;@vue/shared
+</a></li><li class="dropdown-item"><!----> <a href="/ecosystems/compatible/" class="nav-link">
+  生态圈兼容情况
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Menu" class="dropdown-title"><span class="title">学习TODO</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Menu" class="mobile-dropdown-title"><span class="title">学习TODO</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/guide/" class="nav-link">
+  教程
+</a></li><li class="dropdown-subitem"><a href="/router/" class="nav-link">
+  vue-router-next
+</a></li><li class="dropdown-subitem"><a href="/guide/transition/" class="nav-link">
+  transition
+</a></li><li class="dropdown-subitem"><a href="/api/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/style-guide/" class="nav-link">
+  风格指南
+</a></li><li class="dropdown-subitem"><a href="/examples/" class="nav-link">
+  示例
+</a></li><li class="dropdown-subitem"><a href="/cookbook/" class="nav-link">
+  Cookbook
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="生态系统" class="mobile-dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          帮助
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://forum.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  论坛
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://chat.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  聊天室
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://events.vuejs.org/meetups/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  聚会
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Devtools
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue CLI
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://vue-loader.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue Loader
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          核心插件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue Router
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://ssr.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue 服务端渲染
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          信息
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://news.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  周刊
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/veaba/vue-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/vue-release-3.0/" class="nav-link">
+  Vue 3.0 release： One Piece
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前瞻TODO" class="dropdown-title"><span class="title">前瞻TODO</span> <span class="arrow down"></span></button> <button type="button" aria-label="前瞻TODO" class="mobile-dropdown-title"><span class="title">前瞻TODO</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/source/" class="nav-link router-link-active">
+  源码解读@vue
+</a></li><li class="dropdown-item"><!----> <a href="/source/runtime-core/" class="nav-link">
+    -&gt;@vue/runtime-core
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-core/" class="nav-link">
+    -&gt;@vue/compile-core
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-dom.html" class="nav-link">
+    -&gt;@vue/compile-dom
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-sfc.html" class="nav-link">
+    -&gt;@vue/compile-sfc
+</a></li><li class="dropdown-item"><!----> <a href="/source/compile-ssr.html" class="nav-link">
+    -&gt;@vue/compile-ssr
+</a></li><li class="dropdown-item"><!----> <a href="/source/reactivity/" class="nav-link">
+    -&gt;@vue/reactivity
+</a></li><li class="dropdown-item"><!----> <a href="/source/runtime-dom.html" class="nav-link">
+    -&gt;@vue/runtime-dom
+</a></li><li class="dropdown-item"><!----> <a href="/source/runtime-test.html" class="nav-link">
+    -&gt;@vue/runtime-test
+</a></li><li class="dropdown-item"><!----> <a href="/source/server-render.html" class="nav-link">
+    -&gt;@vue/server-render
+</a></li><li class="dropdown-item"><!----> <a href="/source/shared.html" class="nav-link">
+    -&gt;@vue/shared
+</a></li><li class="dropdown-item"><!----> <a href="/ecosystems/compatible/" class="nav-link">
+  生态圈兼容情况
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Learn Menu" class="dropdown-title"><span class="title">学习TODO</span> <span class="arrow down"></span></button> <button type="button" aria-label="Learn Menu" class="mobile-dropdown-title"><span class="title">学习TODO</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          文档
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/guide/" class="nav-link">
+  教程
+</a></li><li class="dropdown-subitem"><a href="/router/" class="nav-link">
+  vue-router-next
+</a></li><li class="dropdown-subitem"><a href="/guide/transition/" class="nav-link">
+  transition
+</a></li><li class="dropdown-subitem"><a href="/api/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/style-guide/" class="nav-link">
+  风格指南
+</a></li><li class="dropdown-subitem"><a href="/examples/" class="nav-link">
+  示例
+</a></li><li class="dropdown-subitem"><a href="/cookbook/" class="nav-link">
+  Cookbook
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="生态系统" class="mobile-dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          帮助
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://forum.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  论坛
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://chat.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  聊天室
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://events.vuejs.org/meetups/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  聚会
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Devtools
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://cli.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue CLI
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://vue-loader.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue Loader
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          核心插件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue Router
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vuex
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://ssr.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue 服务端渲染
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          信息
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://news.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  周刊
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/veaba/vue-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/assets/js/app.277ec9ba.js" defer></script><script src="/assets/js/2.ea1fdfa4.js" defer></script><script src="/assets/js/39.13cde29f.js" defer></script>
+  </body>
+</html>
